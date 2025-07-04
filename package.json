@@ -7,7 +7,7 @@
     "dev": "nodemon src/server.ts",
     "build": "tsc",
     "prod": "node dist/server.js"
-    },
+  },
   "keywords": [
     "api",
     "node",
@@ -27,6 +27,7 @@
     "dotenv": "^17.0.1",
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
+    "http-status-codes": "^2.3.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.10"
   }

@@ -4,7 +4,7 @@ import { healthCheck } from "../handler/example";
 const router = Router();
 
 router.get("/health-check", (_req, res) => {
-	res.json(healthCheck());
+	res.send(healthCheck());
 });
 
 export default router;
