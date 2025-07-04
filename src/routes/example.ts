@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { healthCheck } from "../handler/example";
+import { healthCheck } from "../handlers/example";
 
 const router = Router();
 

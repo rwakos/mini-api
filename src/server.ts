@@ -1,15 +1,16 @@
+import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import morgan from "morgan";
-import { notFound } from "./middleware/example";
-import router from "./route/example";
+import { notFound } from "./middlewares/example";
+import router from "./routes/example";
 
 dotenv.config();
 
 const app = express();
 
 app.use(morgan("combined"));
-
+app.use(cors());
 app.use(router);
 
 app.use(notFound);
