@@ -1,16 +1,16 @@
 import dotenv from "dotenv";
 import express from "express";
 import morgan from "morgan";
-import { notFound } from "./middleware/not-found";
+import { notFound } from "./middleware/example";
+import router from "./route/example";
 
 dotenv.config();
+
 const app = express();
 
 app.use(morgan("combined"));
 
-app.get("/health-check", (_req, res) => {
-	res.json({ message: "Up and running" });
-});
+app.use(router);
 
 app.use(notFound);
 
