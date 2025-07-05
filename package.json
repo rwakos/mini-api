@@ -2,8 +2,7 @@
   "name": "basic-node-api",
   "version": "1.0.0",
   "description": "Basic API Shell with node typescript and express",
-  "main": "src/server.ts",
-  "scripts": {
+    "scripts": {
     "dev": "nodemon src/server.ts",
     "build": "tsc",
     "prod": "node dist/server.js"

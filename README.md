@@ -78,11 +78,47 @@ docker run -p 3000:3000 mini-api
 
 ---
 
-## Testing
+## Testing it
 
 You can add your preferred testing framework (e.g., Jest, Mocha) to test controllers and routes. The layered structure makes it easy to mock dependencies and write unit/integration tests.
 
+For now, let's check if the api is running as expected, let's try the health-check using curl (you can use postman or thunder or any other tool):
+
+```bash
+curl -i localhost:3000/health-check
+```
+
+And you should get the response:
+
+```bash
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 28
+ETag: W/"1c-xAgsG58nX9/0dDZ4uBu5Vvjqs5c"
+Date: Sat, 05 Jul 2025 12:17:42 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"App is running"}%
+```
+
+As you can see, cors is enabled in the response:
+
+```Access-Control-Allow-Origin: *```
+
+And the content type:
+
+```application/json```
+
+Finally our message:
+
+```{"message":"App is running"}```
+
 ---
+
+Enjoy ;)
 
 ## License
 
